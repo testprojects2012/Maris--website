@@ -4,6 +4,11 @@
 </head>
 
 <style>
+@font-face {
+    font-family: fonttest;
+    src: url("../gaslight.ttf");
+}
+
 @keyframes sway {
 
   0% { transform: rotate(0deg); }
@@ -14,7 +19,7 @@
 }
 
 .swaying-image:hover {
-  animation: sway 1s infinite step-end
+  animation: sway 1.5s infinite cubic-bezier(.2, .4,.6, 1);
 }
 
     body {
@@ -40,11 +45,11 @@
     padding: 10px; /* Adds space between the content and border */
     font-size: 30px;
     margin: 1px; /* Adds space outside the border, between this box and others */
-    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button1:hover {
-    font-size: 40px;
+    font-size: 39px;
     width: 190px; /* Sets the width of the content area */
     height: 40px;
 }
@@ -67,7 +72,7 @@
 }
 
 .text:hover {
-  font-size: 55px; /* Size on hover */
+  font-size: 50px; /* Size on hover */
 }
 
     header {
@@ -122,9 +127,16 @@
 </style>
 
 
-<header class="text" >Gallery</header>
+<header style="font-size: 45px; font-family: fonttest; ;"><a style="filter: drop-shadow(2px 2px 1px rgba(118, 0, 0, 0.881));">Gallery</a>
+<div class="button1" style="position: absolute; top: 10px;" >
+    <a  style="color: white; text-decoration: none; " href="../index.html">
+        main page  
+    </a>
+</div>
 
-<h1> testing multiple images</h1> 
+</header>
+
+<h1> testing multiple images</h1>
 
 <h2>
 <img src="Gallery images/skry.png" class="galleryimage swaying-image" >
@@ -134,10 +146,5 @@
 </h2>
 
 
-<div class="button1" >
-    <a  style="color: white; text-decoration: none; " href="../index.html">
-        main page  
-    </a>
-</div>
 
 
