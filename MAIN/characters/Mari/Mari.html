@@ -1,0 +1,246 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Mari's website - Mari</title>    
+ <link rel="icon" type="x-icon" href="MARI-Icon.svg">
+</head>
+<style>
+.MoonyBox {
+  position: absolute;
+  width: 30%;
+  height: 60%;
+  background-image: linear-gradient(to bottom, rgb(0,0,0), var(--darkermaincolor));
+  border: 5px solid var(--bordercolor);
+  padding: 10px;
+  filter: drop-shadow(0px 0px 15px rgba(13, 15, 118, 0.737));
+  overflow:hidden;
+  translate: 40px 20px;
+  border-radius: 10px 10px 10px 10px ;
+  z-index: 1;
+  transition: 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);}
+.MoonyBox:hover {
+    filter: drop-shadow(0px 0px 30px rgba(35, 32, 190, 0.952));
+    width: 30%;
+    height: 145%;
+    z-index: 999;}
+.heightline {
+  background-color: red;
+  padding-right: 5%;
+  height: 3px;
+  width: 300px;
+  border: solid 2px darkred;}
+:root {
+  --darkermaincolor:#981010;
+  --bordercolor:#ea2121;
+  --maincolor:#e55454;
+  --color:invert(40%) sepia(400%) hue-rotate(320deg) saturate(199.90967741935484%) brightness(130%);
+  --text-shadow: -2px -2px 0 var(--darkermaincolor),2px -2px 0 var(--darkermaincolor),-2px 2px 0 var(--darkermaincolor),2px 2px 0 var(--darkermaincolor);
+  --dropcolor: #bb1740;}
+.funfactbox {
+ background-color: var(--maincolor);
+  border: 5px solid var(--bordercolor);
+  padding: 10px;
+  filter: drop-shadow(0px 0px 15px var(--dropcolor));
+  border-radius: 10px 10px 10px 10px ;
+  width: 90%;}
+.BOXHERE {
+ background-color: var(--maincolor);
+  border: 5px solid var(--bordercolor);
+  padding: 10px;
+  filter: drop-shadow(0px 0px 15px var(--dropcolor));
+  border-radius: 10px 10px 10px 10px ;}
+a:link {
+  color: green;
+  text-decoration: none; 
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+a:visited {
+  color: rgb(228, 109, 228);
+  text-decoration: none;
+    filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+a:hover {
+  margin-top: -5px;
+  color: rgb(177, 1, 89); 
+  text-decoration: none; 
+  filter: drop-shadow(0px 5px 3px rgb(0,0,0));}
+a:active {
+    color: rgb(150, 0, 75); 
+  translate: 0px 2px;}
+.coolhighlight {
+  margin-top: 20px; 
+  filter: drop-shadow(0 0 -2px #fbfbfb);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  .5s;}
+.coolhighlight:hover {
+  translate: 0px -10px;
+  filter: drop-shadow(0 0 10px #fbfbfb);}
+.MariCenter {
+  display: block;
+  margin-left: 3%;
+  margin-right: auto;}
+.button1 {
+  opacity: 1;
+    width: 45px; 
+    height: 20px; 
+    background-color: #ff3366; 
+    border: 5px solid #e42555;
+    border-radius: 15px;    
+    padding: 10px; 
+    margin: 1px;
+    font-size: 20px;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+.button1:hover {
+  opacity: 0.5;
+    translate: 5px;
+    width: 55px; 
+    height: 25px;
+    font-size: 25px;}
+.my-box {
+    width: 80px; 
+    height: 20px; 
+    background-color: #ff3366; 
+    border: 5px solid #e42555;
+    border-radius: 15px; 
+    padding: 10px;
+    margin-bottom: 5px;}
+.testingtween {
+    font-size: 16px;
+    width: 60px; 
+    height: 20px;
+    border: 5px solid #e42555;
+    transition:.5s cubic-bezier(.1,1.1,.25,1.38)}
+.testingtween:hover {
+    font-size: 20px;
+    width: 67px; 
+    height: 27px;
+    border: 7px solid #e42555;}
+.textbounce {
+  font-size: 48px;
+    transition:.25s cubic-bezier(.1,1.1,.25,1.38) font-size,.2s cubic-bezier(.175,.885,.32,1.275) filter}.this-cant-be-real[data-astro-cid-je45zl3q]:hover{--depth: 10px;translate:0px -10px;filter:drop-shadow(0 10px 0px var(--col-main))}#name-header[data-astro-cid-je45zl3q]{font-size:4.5em;color:var(--col-main);max-width:23rem;margin:10px 0 30px;line-height:.7em}.opener[data-astro-cid-je45zl3q]{display:flex;flex-direction:row;gap:48px;min-height:28rem;align-items:center;justify-content:center}@media screen and (max-width: 1200px){.opener[data-astro-cid-je45zl3q]{flex-direction:column;font-size:150%;min-height:85vh}#name-header[data-astro-cid-je45zl3q]{font-size:10vw;max-width:100%}}
+.textbounce:hover {
+  font-size: 54px;}
+       .container {
+            width: 300px;
+            height: 150px;
+            border: 2px solid #ffffff;
+            margin: auto;
+            overflow-x: scroll;
+            overflow-y: scroll; }
+        .content {
+            width: 500px; 
+            height: 300px;
+            background-color: transparent;
+            padding: 20px;}
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: transparent;}
+::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(164, 0, 0); 
+  border-radius: 10px;
+  border: 5px solid red}
+.center-img {
+ margin-top: 200px;
+  height: 185%; }
+.image1 {
+  top: 0;
+  left: 0;
+  z-index: 1; }
+.testeffect {
+  width: 30%;
+  translate: 0px 0px;
+  filter: 
+  drop-shadow(0 0px -0.9px rgb(255,255,255))
+  drop-shadow(0 0px 0px rgb(174, 46, 46));
+  transition: 1s cubic-bezier(.1,1.1,.25,1.38);}
+  .testeffect:hover {
+      width: 32%;
+  translate: 0px -15px;
+  filter: 
+  drop-shadow(0 0px 4px rgb(255,255,255))
+  drop-shadow(0 15px 1px rgb(174, 46, 46));}
+.outlined-text {
+  font-size: 48px;
+  color: white;
+  text-shadow:
+    -2px -2px 0 #dc2553,
+    2px -2px 0 #dc2553,
+    -2px 2px 0 #dc2553,
+    2px 2px 0 #dc2553;
+    transition:.5s cubic-bezier(.1,1.1,.25,1.38)}
+.outlined-text:hover {
+  text-shadow:
+    -2.5px -2.5px 0 #e42555,
+    2.5px -2.5px 0 #e42555,
+    -2.5px 2.5px 0 #e42555,
+    2.5px 2.5px 0 #e42555;}
+html {
+  background-color: var(--darkermaincolor);  background-blend-mode: multiply;
+  background-image: url(../grid.gif);
+  background-size: 3cm;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;}
+header {
+    opacity: 100%;
+  position: fixed;
+  text-shadow:var(--text-shadow);
+  background-color: #4f3e92;
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  text-align: left;
+  border: 5px solid #36296b;
+  border-radius: 15px;
+  z-index: 9999;
+    translate: 0px 5px;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+  header:hover {
+    opacity: 50%;
+    translate: 0px -10px;
+  }
+    nav ul li {
+        display: inline;
+        margin-right: 20px;}
+    nav ul li a {
+        color: rgb(255, 151, 151);
+        text-decoration: none;}
+    nav ul li a:hover {
+        text-decoration: underline;}
+</style>
+<header style="font-size: 25px;"><a href="../characterlist.html">Characters</a><a style="transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);"> ► </a>  <a href="Mari.html" style="transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);"><b>Mari</b></a></header>
+<div>
+<div class="textbounce">
+    <span class="outlined-text textbounce " style="position: absolute; right:50%; top: 15%; color: #ff3366;"><b>Mari!</b></span> 
+  <div style="color: #cd3672; position: absolute; right:41%; top: 15.5%;"  class="my-box testingtween"><b style="color: #310000;">She/her</b></div>  
+  <div style="color: #cd3672; position: absolute; right:33%; top: 15.5%;"  class="my-box testingtween"><img src="../../../icons/flag/trans.svg" style="width: 60px; height: 30px; position: absolute; top: 15%;"></div></div>
+</div>
+
+<div class="MoonyBox" >
+<img src="Mari render.svg"  class="testeffect MariCenter" style=" position: absolute; transform: translateX(calc(-50% + 160px)) translateY(calc(-50% + 450px)) scale(450%);">
+</div>
+<div style="position: absolute; right: 7%; top: 30%; width: 80%;">
+<h6 class="BOXHERE"  style="color: whitesmoke;font-size:20px; position:absolute; top: 35%; left: 35%; font-family: Courier New;">Mari is a 14-year-old girl, originally part of the EXR-P program (which she never did like doing), though has left in turn of a one-on-one encounter with <span style="color: #137d07; outline: #0c61038e; text-shadow: 0 0 3px #5eff3a; font-family: Times New Roman;"><a href="https://urbanshade.org/wiki/Mr._Lopee" style="color: #137d07; text-decoration: underline;" ><B>Mr. Lopee,</a></B></span> who had noticed that she was documented as "Z-645", decided to give her an option, join the Pressure Cycle, or repeat this over and over again. she, as you probably could tell, picked the former, she now resides in the upper part of Sebastians hideout. Her and <a href="../Carnellia/Carnellia.html" style="color: #7b1098; filter: drop-shadow(0px 0px 4px #931bb4);">Carnellia</a> are dating .</h6>
+</div>
+<div style="position: absolute; right: 7%; top: 75%; width: 80%;">
+<h6 class="BOXHERE" style="color: whitesmoke;font-size:20px; position:absolute;left: 35%; font-family: Courier New;"> Mari, before she was taken by Urbanshade, lived in a strict christian household, which shunned her for doing feminine things (she was male at the time). </h6>
+</div>
+
+<div class="BOXHERE" style="position: absolute; left: 2%; top: 125%; color: white; max-width: 55%;"> Mari started out as just another OC of mine, I didnt really have a plan for her at first, just made her, as I do with all my other characters. </div>
+ 
+  <div style="position: absolute; right:  2%; top: 115%;">
+    <img class="image1" src="../CharacterImages/height-ref.svg" style="filter:var(--color); position: absolute; transform: translateX(calc(-50% + -270px)) translateY(calc(-50% + 430px)) scale(200%); z-index: -1; ">
+    <img class="center-img coolhighlight" style="height: 500px;text-align: bottom; position: absolute; transform: translateX(calc(-200% + 16px + 5.5px)) translateY(calc(490px + 5px - 100% + 55px )) scale(110%); text-align: center;" src="Mari Height map.svg">
+    <div class="heightline" style="position: absolute; transform: translateX(calc(-50% + -280px)) translateY(calc(-50% + 250px)) scale(100%); text-align: right"><span style="font-size: 250%; position: relative; top: -60px; left: 55px; color: #ffffff; filter: drop-shadow(3px 3px 1px rgb(53, 37, 2)) drop-shadow(-3px -3px 4px rgb(95, 66, 8));font-weight: 900; ">4'10</span><span style="font-size: 125%; position: relative; top: -45px; left: -10px; color: #000000; filter: drop-shadow(3px 3px 1px var(--darkermaincolor)) drop-shadow(-3px -3px 4px var(--darkermaincolor));font-weight: 900;">147 CM</span></div>
+  </div>
+
+</div>
+<div  class="funfactbox" style="color: whitesmoke;font-size:20px; font-family: Courier New; position: absolute; top: 1500px; right: 5%;">fun facts!
+<p>● Mari is based off of Cyn, from Murder Drones.</p>
+<p>● She as a Deep-Sea-Bunny named "Valkyie", who is red from a rare genetic failure. </p>
+<p>● uuuhhh idk rn maan</p>
+</div>
+<a class="button1" href="../characterlist.html" style="color: white; text-decoration: none; position: fixed; bottom: 5%; left: 5%;">Back</a>
+</body>
+
+

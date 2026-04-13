@@ -1,0 +1,139 @@
+
+<html lang="en" x-data="{showDropdown: false, loading: false}">
+<head>
+  <title>Mari's website - characters</title>
+  <link rel="icon" type="x-icon" href="icon.png">
+</head>
+
+
+<style>
+.highlightable {
+translate: 0px 0px;
+filter:drop-shadow(0px 0px -5px rgb(255,255,250))
+drop-shadow(0px 0px 0px rgb(174, 46, 46));
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+.highlightable:hover {
+translate: 0px -20px;
+filter:drop-shadow(0px 0px 5px rgb(255,255,250))
+drop-shadow(0px 15px 2px rgb(174, 46, 46));
+z-index: 50;}
+.scroll-box {
+    width: 90%; /* Set the width of the box */
+    text-align: center;
+    height: 150px; /* Set the fixed height of the box */
+    border: 1px solid #ccc; /* Add a border for visibility */
+    padding: 10px; /* Add some padding inside the box */
+    overflow: auto; /* This is the key property for scrolling */}
+.scroll-box img {
+  object-fit: fill;}
+.testeffect {
+  translate: 0px 10px; /* Initial size */
+  transition:.25s cubic-bezier(.1,1.1,.25,1.38) translate,.2s cubic-bezier(.175,.885,.32,1.275) filter}.this-cant-be-real[data-astro-cid-je45zl3q]:hover{--depth: 10px;translate:0px -10px;filter:drop-shadow(0 10px 0px var(--col-main))}#name-header[data-astro-cid-je45zl3q]{font-size:4.5em;color:var(--col-main);max-width:23rem;margin:10px 0 30px;line-height:.7em}.opener[data-astro-cid-je45zl3q]{display:flex;flex-direction:row;gap:48px;min-height:28rem;align-items:center;justify-content:center}@media screen and (max-width: 1200px){.opener[data-astro-cid-je45zl3q]{flex-direction:column;font-size:150%;min-height:85vh}#name-header[data-astro-cid-je45zl3q]{font-size:10vw;max-width:100%}}
+.testeffect:hover {
+  translate: 0px 0px; /* Size on hover */
+  filter: drop-shadow(0 10px 3px rgb(0, 0, 0));
+}
+.text:hover {
+  font-size: 40px; /* Size on hover */
+}
+        body {
+          background-blend-mode: multiply;
+          background-image: url(../grid.gif);
+          background-size: 3cm;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;}
+    header {
+        background-color: #4f3e92;
+        color: rgb(101, 16, 16);
+        padding: 30px;
+        text-align: left;
+        border: 5px solid #36296b;}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        color: rgb(255, 151, 151);
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+
+    }
+
+::-webkit-scrollbar {
+  width: 30px; /* width of the vertical scrollbar */
+  background-color: transparent
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0); /* color of the tracking area */
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(164, 0, 0); /* color of the scroll thumb */
+  border-radius: 30px; /* roundness of the scroll thumb */
+  border: 5px solid red
+}
+<!-- links-->
+a:link {
+  color: green;
+  text-decoration: none; 
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+a:visited {
+  color: rgb(228, 109, 228);
+  text-decoration: none;
+    filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+a:hover {
+  margin-top: -5px;
+  color: rgb(177, 1, 89); 
+  text-decoration: none; 
+  filter: drop-shadow(0px 5px 3px rgb(0,0,0));}
+a:active {
+    color: rgb(150, 0, 75); 
+  translate: 0px 2px;}
+
+</style>
+<body style="background-color: #310000;">
+
+<header style="font-size: 25px;" ><a style="position: absolute; top: 20px; transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);" href="../../index.html">Main page</a><a style="position: absolute; top: 20px; left: 160px; transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);"> ► </a><a style="position: absolute; top: 20px; left: 190px; transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);">Characters</a></header>
+
+<!-- <a href="Mari/Mari.html" target="_blank" style="padding-right: 50px;">
+<img src="Mari.svg" class="testeffect" style="height: 300px; width: 300px;">
+</a>
+
+<a href="Carnellia/Carnellia.html" target="_blank" style="padding-right: 50px;">
+<img src="Carny.svg" class="testeffect" style="height: 300px; width: 300px;">
+</a> -->
+    <img src="BG.svg" style="overflow: hidden;border:dashed 10px rgb(96, 5, 5); position: absolute; 
+                        transform: translateX(calc(-50% + 600px))
+                        translateY(calc(-50% + 400px)) scale(43%) scale(400%);">
+<a href="Mari/Mari.html" style="padding-right: 50px;">
+    <img src="Mari-CharacterIcon.svg" class="highlightable" style="position: absolute; transform: translateX(calc(-50% + 350px)) translateY(calc(-50% + 525px)) scale(125%);">
+</a>
+<a href="Carnellia/Carnellia.html" style="padding-right: 50px;">
+    <img src="Carnellia/Carny render.svg" class="highlightable" style="position: absolute; transform: translateX(calc(-50% + 600px)) translateY(calc(-50% + 400px)) scale(125%);">
+
+  </a>
+
+<a href="Sunny/Sunny new.html" style="padding-right: 50px;">
+    <img src="Sunny-CharacterIcon.svg" class="highlightable" style="position: absolute; transform: translateX(calc(-50% + 300px)) translateY(calc(-50% + 250px)) scale(125%);">
+</a>
+<a href="Moony/Moony new.html" style="padding-right: 50px;">
+    <img src="Moony-CharacterIcon.svg" class="highlightable" style=" position: absolute; transform: translateX(calc(-50% + 328px)) translateY(calc(-50% + 306px)) scale(125%);">
+</a>
+</html>
+
+    <span style="color: white; position: absolute;">(i didnt make a character icon for carnellia yet so i just used a render of her, but it still works as a link so its fine :3)</span>
