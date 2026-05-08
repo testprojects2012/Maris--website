@@ -1,0 +1,301 @@
+
+<head>
+<meta name="viewport" content="width=device-width"> 
+ <title>Mari's website - template</title>    
+ <link rel="icon" type="x-icon" href="Carny icon.svg">
+</head>
+<style>
+/* keyframes (keep at first!!!!) */
+@keyframes charmove {
+  0%, 100% {transform: translateY(5px)}
+  50% {transform: translateY(0px)}}
+@keyframes hovertilt {
+  0% {rotate: 5deg;}
+  50% {rotate: -5deg;}
+  100% {rotate: 5deg;}}
+@keyframes backarrowsway {
+  0% {translate: 0px 5px;}
+  50% {translate: 0px 0px;}
+  100% {translate: 0px 5px;}}
+
+    .page { display: none; }
+    /* When the URL hash matches the ID, show it */
+    .page:target { display: block; }
+    /* Ensure the first page is visible if no hash is present (optional workaround) */
+    
+    .box-container {
+      padding: 20px;
+    background-color: var(--maincolor);
+    width: 95%;height: 95%;
+    border: 5px solid  var(--bordercolor);
+    border-radius: 10px;}
+
+  .charmove {animation: 2s charmove cubic-bezier(0.36, 0, 0.64, 1) infinite;}
+:root {
+  --textcol: #c7c7c7;
+  --dropshadowcol1:#00046d;
+  --dropshadowcol2:#1a1fac;
+  --backgroundcolor:#00473f;
+  --darkermaincolor:#3b394b;
+  --bordercolor:#a897a7;
+  --maincolor:#2f2930;
+  --color:invert(50%) sepia(400%) hue-rotate(290deg) saturate(199.90967741935484%) brightness(130%);
+  --text-shadow: -2px -2px 0 #36296b,2px -2px 0 #36296b,-2px 2px 0 #36296b,2px 2px 0 #36296b;}
+.gallery {
+  overflow-y: scroll;
+  background-color: var(--maincolor);
+  width: 95%;height: 90%;
+  border: 5px solid  var(--bordercolor);
+  border-radius: 10px;}
+.galleryimg {
+  margin: 20px;
+  border: 5px solid var(--bordercolor);border-radius: 15px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, var(--maincolor), var(--darkermaincolor));
+  height: 40%;width: 20%;
+  transition: .25s linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);}
+.galleryimg:hover {height: 50%;width: 25%;}
+.galleryimg img {transition: 0.25s linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);}
+.galleryimg img:hover {scale: 110%;}
+
+
+/* height-area */
+.heightline {
+  background-color: red;
+  padding-right: 5%;
+  height: 3px;
+  width: 300px;
+  border: solid 2px darkred;}
+
+/*character info*/
+.shemove {
+  translate: 0px 0px;
+  font-size: 20px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  padding: 0px;}
+.shemove:hover {
+  translate: -7px 0px;
+  padding: 15px;
+  font-size: 22px;}
+.MoonyBox {
+  position: absolute;
+  width: 30%;
+  height: 60%;
+  background-image: linear-gradient(to bottom, rgb(0,0,0), var(--darkermaincolor)); 
+  border: 5px solid var(--bordercolor); 
+  padding: 10px; 
+  filter: drop-shadow(0px 0px 15px var(--dropshadowcol1));
+  overflow:hidden; 
+  translate: 40px 100px; 
+  border-radius: 10px 10px 10px 10px ; 
+  z-index: 1;
+  transition: 0.75s linear(0, 0.002 0.6%, 0.008 1.3%, 0.017 1.9%, 0.03 2.6%, 0.047 3.3%, 0.067 4%, 0.123 5.6%, 0.176 6.9%, 0.243 8.4%, 0.519 14.1%, 0.634 16.6%, 0.694 18%, 0.746 19.3%, 0.794 20.6%, 0.835 21.8%, 0.873 23%, 0.91 24.3%, 0.943 25.6%, 0.971 26.9%, 0.996 28.2%, 1.018 29.5%, 1.036 30.8%, 1.051 32.2%, 1.068 34.2%, 1.079 36.3%, 1.084 38.5%, 1.085 40.9%, 1.081 43.3%, 1.073 46%, 1.033 55.9%, 1.018 60.2%, 1.007 64.3%, 1 68.4%, 0.995 73.4%, 0.993 79.2%, 1);}
+.MoonyBox:hover {
+  img {translate: 50%;}; 
+  filter: drop-shadow(0px 0px 30px var(--dropshadowcol2)); width: 45%; height: 145%;z-index: 999;}
+.MoonyBox img:hover {
+  translate: 50% -15px;}
+.funfactbox {
+  background-color:var(--maincolor);
+  border: 5px solid  var(--bordercolor);
+  padding: 10px;
+  filter: drop-shadow(0px 0px 15px var(--dropshadowcol1));
+  border-radius: 10px 10px 10px 10px;
+  width: 90%;}
+.BOXHERE {
+ background-color: var(--bordercolor);
+  border: 5px solid var(--darkermaincolor);
+  padding: 10px;
+  filter: drop-shadow(0px 0px 15px var(--dropshadowcol1));
+  border-radius: 10px 10px 10px 10px ;}
+.BOXHERE:hover {
+    filter: drop-shadow(0px 0px 25px var(--dropshadowcol2));}
+/* for links */ html {
+  scroll-behavior:smooth;
+  a:link {
+  color: rgb(234, 75, 75);
+  text-decoration: none; 
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+  a:visited {
+  color: rgb(160, 50, 50);
+  text-decoration: none;
+  filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+  a:hover {
+  margin-top: -5px;
+  color: rgb(255, 153, 204); 
+  text-decoration: none; 
+  filter: drop-shadow(0px 5px 3px rgb(0,0,0));}
+  a:active {
+  color: rgb(85, 35, 60); 
+  translate: 0px 2px;}}
+.coolhighlight {
+  margin-top: 20px; 
+  filter: drop-shadow(0 0 -2px #fbfbfb);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1)  .5s;}
+.coolhighlight:hover {
+  translate: 0px -10px;
+  filter: drop-shadow(0 0 10px #fbfbfb);}
+.MariCenter {
+  display: block;
+  margin-left: 3%;
+  margin-right: auto;}
+.button1 {
+  opacity: 1;
+  width: 55px; 
+  height: 55px; 
+  background-color: var(--maincolor); 
+  border: 5px solid var(--bordercolor);
+  border-radius: 15px;    
+  padding: 10px; 
+  margin: 1px;
+  font-size: 20px;
+  animation: backarrowsway2 1.5s ease-in-out infinite;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+.button1 img {
+      animation: backarrowsway 1.5s ease-in-out infinite;}
+.button1:hover img {
+  animation: hovertilt 1s ease-in-out infinite;}
+.button1:hover {
+  opacity: 0.5;
+    translate: 2px;
+    width: 60px; 
+    height: 60px;
+    font-size: 25px;}
+.my-box {
+  overflow: hidden;
+  max-width: 350px; 
+  min-width: 30px;
+  height: 20px; 
+  background-color: var(--maincolor); 
+  border: 5px solid var(--bordercolor);
+  border-radius: 15px; 
+  padding: 10px;
+  margin-bottom: 5px;}
+.textbounce {
+  font-size: 48px;
+    transition:.25s cubic-bezier(.1,1.1,.25,1.38) font-size,.2s cubic-bezier(.175,.885,.32,1.275) filter}.this-cant-be-real[data-astro-cid-je45zl3q]:hover{--depth: 10px;translate:0px -10px;filter:drop-shadow(0 10px 0px var(--col-main))}#name-header[data-astro-cid-je45zl3q]{font-size:4.5em;color:var(--col-main);max-width:23rem;margin:10px 0 30px;line-height:.7em}.opener[data-astro-cid-je45zl3q]{display:flex;flex-direction:row;gap:48px;min-height:28rem;align-items:center;justify-content:center}@media screen and (max-width: 1200px){.opener[data-astro-cid-je45zl3q]{flex-direction:column;font-size:150%;min-height:85vh}#name-header[data-astro-cid-je45zl3q]{font-size:10vw;max-width:100%}}
+.textbounce:hover {
+  font-size: 54px;}
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: transparent;}
+::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(164, 0, 0); 
+  border-radius: 10px;
+  border: 5px solid red}
+.center-img {
+ margin-top: 200px;
+  height: 185%; }
+.testeffect {
+  translate: 0px 0px;
+  filter: 
+  drop-shadow(0 0px -0.9px rgb(255,255,255))
+  drop-shadow(0 0px 0px var(--maincolor));
+  transition: .5s cubic-bezier(.1,1.1,.25,1.38);}
+.testeffect:hover {
+  transform: scale(250%);
+  translate: 0px -15px;
+  filter: 
+  drop-shadow(0 0px 4px rgb(255,255,255))
+  drop-shadow(0 15px 1px var(--maincolor));}
+.outlined-text {
+  font-size: 48px;
+  color: white;
+  text-shadow:
+    -3px -3px 0 var(--darkermaincolor),
+    3px -3px 0 var(--darkermaincolor),
+    -3px 3px 0 var(--darkermaincolor),
+    3px 2px 0 var(--darkermaincolor);
+    transition:.5s cubic-bezier(.1,1.1,.25,1.38)}
+.outlined-text:hover {
+  translate: -7px;
+  text-shadow:
+    -4px -4px 0 var(--maincolor),
+    4px -4px 0 var(--maincolor),
+    -4px 4px 0 var(--maincolor),
+    4px 4px 0 var(--maincolor);}
+
+
+html {
+  background-color: var(--backgroundcolor);
+  background-image:url(../grid.gif);  
+  background-blend-mode: multiply;
+  background-size: 3cm;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;}
+  
+header {  
+  position: fixed;
+  text-shadow:var(--text-shadow);
+  background-color: var(--darkermaincolor);
+  color: rgb(255, 255, 255);
+  padding: 30px;
+  text-align: left;
+  border: 5px solid var(--bordercolor);
+  border-radius: 15px;
+  z-index: 9999;
+  translate: 0px 5px;
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+header:hover {
+    translate: 0px -10px;}
+</style>
+<header style="font-size: 25px;"><b><a href="../characterlist.html">Characters</b></a><a style="font-size: 25px;transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);"> ► </a>  <a href="page.html" style="font-size: 25px;transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);"><b>template</b></a></header>
+
+<div class="textbounce">
+  <span class="outlined-text textbounce " style="position: absolute; left:40%; top: 20%; color: var(--textcol);"><b>template!</b></span> 
+  <div style="position: absolute; left:58%; top: 20.5%;"  class="my-box shemove"><b style="color: var(--textcol)">gender</b></div>
+</div>
+
+<div class="MoonyBox charmove">
+<img src="placeholder.svg"  class="testeffect MariCenter" style=" position: absolute; scale:unset; transform: translateX(calc(-50% + 170px)) translateY(calc(-50% + 250px)) scale(200%);">
+</div>
+<div style="position: absolute; right: 7%; top: 30%; width: 80%;">
+<h6 class="BOXHERE"  style="color: var(--textcol);font-size:20px; position:absolute; top: 35%; left: 35%; font-family: Courier New;">(template information) </h6>
+</div>
+<div style="position: absolute; right: 7%; top: 60%; width: 80%;">
+<h6 class="BOXHERE"  style="color: var(--textcol);font-size:20px; position:absolute; top: 35%; left: 35%; font-family: Courier New;">template information sbout backstory here </h6>
+</div>
+
+
+<div class="BOXHERE" style="position: absolute; left: 5%; max-width: 45%; top: 130%; color: white; text-align: justify;">
+  <p>put information about the creation of whatever character i decide to make, aswell as color schemes here</p></div>
+ 
+  <div style="position: absolute; right:  2%; top: 125%;">
+    <img class="image1" src="../CharacterImages/height-ref.svg" style="filter:var(--color); position: absolute; transform: translateX(calc(-50% + -270px)) translateY(calc(-50% + 430px)) scale(200%); z-index: -1; ">
+    <img class="center-img coolhighlight" style="height: 500px;text-align: bottom; position: absolute; transform: translateX(calc(-200% + 16px + 5.5px)) translateY(calc(500px - 100%)) scale(140%); text-align: center;" src="Carnellia Height.svg">
+    <div class="heightline" style="position: absolute; transform: translateX(calc(-50% + -280px)) translateY(calc(-50% + 100px)) scale(100%); text-align: right"><span style="font-size: 250%; position: relative; top: -60px; left: 55px; color: #ffffff; filter: drop-shadow(3px 3px 1px rgb(53, 37, 2)) drop-shadow(-3px -3px 4px rgb(95, 66, 8));font-weight: 900; ">6'3"</span><span style="font-size: 125%; position: relative; top: -45px; left: -10px; color: #000000; filter: drop-shadow(3px 3px 1px rgb(53, 37, 2)) drop-shadow(-3px -3px 4px rgb(95, 66, 8));font-weight: 900;">177 CM</span></div>
+  </div>
+
+
+<!--back button-->
+<a href="../characterlist.html" class="button1" style="text-decoration: none; position: fixed; bottom: 5%; right: 5%;">
+    <img src="../CharacterImages/back arrow.svg">
+</a>
+
+
+<div class="box-container" style="position: absolute; top: 300%; left: 5%; width: 90%; height: 90%; background-color: var(--maincolor); font-family: Courier New;">
+  <!-- Navigation Links -->
+  <a href="#funfact" style="position: absolute; transform: translateX(0) translateY(-10px); text-align: center; font-size: 30px;">Fun Facts |</a>
+  <a href="#gallery" style="position:absolute; transform: translateX(140px) translateY(-10px); text-align: center; font-size: 30px;">Gallery </a> 
+<div style="padding-top: 40px;">
+  <div id="funfact" class="page">
+    <div class="funfactbox" style="color: var(--textcol);font-size:20px; font-family: Courier New;">
+      <p>● fun fact 1 </p>
+      <p>● fun fact 2 </p>
+      <p>● fun fact 3 </p>
+    </div>
+  </div>
+
+  <div id="gallery" class="page">
+    <div class="gallery">
+      <img class="galleryimg" src="Zaia OLDOLDOLD EWEWEWEW.svg" id="target-image">
+      <img class="galleryimg" src="../icon.png" id="target-image">
+    </div>
+  </div>
+</div>
+</div>

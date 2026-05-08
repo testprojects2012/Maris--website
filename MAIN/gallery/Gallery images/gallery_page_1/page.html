@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="x-icon" href="gallery_img.jpg">
+<title>test_img_2</title>
+
+<style>
+  .page {
+    display: none;} 
+  .page:target {
+    display: block;}
+  .charactersincluded {
+    background: linear-gradient(to top, #ff542a, #ff8d35), url(../../../grid.gif);  background-clip: content-box;background-blend-mode: multiply;
+    border: 5px solid #ff9340;margin: 5%;height: 60%; width: 90%;border-radius: 15px;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+  .charactersincluded img {
+    padding: 5px;
+    background: linear-gradient(to top, #ff4f4f, #ff2424);
+    border-radius: 30%;
+    margin: 1%;width: 10%;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+  .charactersincluded img:hover {
+    background: linear-gradient(to top, var(--charcolor1), var(--charcolor2));
+    translate: 0px -10px;
+    scale: 1.1;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+  :root {
+  /* character colors*/
+  --charcolor1:#ff7e7e;
+  --charcolor2:#ff4f4f;
+  /* main colors */
+  --backgroundcolor:#ff5c5c;
+  --darkermaincolor:#511d1d;
+  --bordercolor:#922929;
+  --maincolor:rgb(66, 37, 37);}
+  @font-face {
+    font-family: fonttest;
+    src: url("../Limelight.ttf");}
+  @keyframes startup {
+    0% {translate: 0px 100px;transform:rotateX(100deg); filter: drop-shadow(0px 0px 0px #d6674b); opacity: 0; scale: .7;}100% {translate: 0px 0px;transform:rotateX(0deg); filter: drop-shadow(5px 1px 2px #d6674b);opacity: 1; scale: 1;}}
+  @keyframes startup2 {
+    0% {opacity: 0%;}100% {opacity: 100%;}}
+  @keyframes asdasd {
+    0% {transform: rotateY(100deg) rotate(5deg) translateX(calc(10%)); border-radius: 35%;}100% {transform: rotateY(0deg) rotate(0deg) translateX(calc(10%));  border-radius: 15%;}}
+/* for links */ html {  
+  background: linear-gradient(to top, #ff6c47, #feb47b), url(../../../grid.gif);  background-blend-mode: multiply;background-size: 24cm;background-attachment:fixed;
+  font-family: fonttest;
+  scroll-behavior:smooth;
+    ::-webkit-scrollbar {
+      width: 20px;
+      background-color: transparent;}
+    ::-webkit-scrollbar-track {
+      background-color: rgb(0, 0, 0);
+      border-radius: 10px;}
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(164, 0, 0); 
+      border-radius: 10px;
+      border: 5px solid red}
+    a:link {
+      color: rgb(234, 75, 75);
+      text-decoration: none;
+      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+    a:visited {
+      color: rgb(160, 50, 50);
+      text-decoration: none;
+      filter: drop-shadow(0px 2px 3px rgb(0,0,0));}
+    a:hover {
+      margin-top: -5px;
+      color: rgb(255, 153, 204); 
+      text-decoration: none; 
+      filter: drop-shadow(0px 8px 2px rgb(0,0,0));}
+    a:active {
+      color: rgb(85, 35, 60); 
+      translate: 0px 2px;}}
+  header {  
+    position: fixed;
+    text-shadow:var(--text-shadow);
+    background-color: var(--darkermaincolor);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: left;
+    border: 5px solid var(--bordercolor);
+    border-radius: 15px;
+    z-index: 9999;
+    translate: 0px 5px;transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);}
+  header:hover {
+    translate: 0px -10px;}
+  h1 {
+    font-family: fonttest; 
+    font-size: 40px;
+    animation: startup 1 2s cubic-bezier(0.33, 1, 0.51, 1.49);
+    margin-right:30%;
+    margin-left:30%;
+    border-radius: 5px;
+    text-align: center;
+    background: linear-gradient(to top, #d6674b, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(5px 1px 2px #a44a34);}
+  .Mainimage {
+    animation: asdasd 1 2s linear(0, 0.002 0.4%, 0.011 0.9%, 0.022 1.3%, 0.042 1.8%, 0.066 2.3%, 0.096 2.8%, 0.13 3.3%, 0.177 3.9%, 0.255 4.8%, 0.352 5.8%, 0.732 9.4%, 0.873 10.8%, 1.008 12.3%, 1.064 13%, 1.115 13.7%, 1.161 14.4%, 1.195 15%, 1.231 15.7%, 1.257 16.3%, 1.278 16.9%, 1.299 17.6%, 1.313 18.3%, 1.323 19%, 1.328 19.9%, 1.328 20.4%, 1.325 20.9%, 1.314 21.9%, 1.296 22.9%, 1.272 23.9%, 1.237 25.1%, 1.195 26.4%, 1.053 30.5%, 1.013 31.8%, 0.978 33.1%, 0.945 34.6%, 0.921 36%, 0.904 37.4%, 0.894 38.9%, 0.892 39.9%, 0.893 40.9%, 0.897 41.9%, 0.903 43%, 0.922 45.2%, 0.982 50.5%, 1.006 53%, 1.016 54.4%, 1.025 55.8%, 1.03 57.1%, 1.034 58.5%, 1.035 60.6%, 1.032 63%, 1.025 65.3%, 0.999 72.9%, 0.992 75.6%, 0.989 78.2%, 0.989 82.7%, 1.001 93.6%, 1);
+    transform: translateX(calc(10%));
+    align-items: center;
+    padding: 2.5%;
+    width: 80%;
+    height: 80%;
+    background-color: var(--backgroundcolor);
+    border-radius: 15%;
+    border: 10px solid var(--bordercolor);
+    transition: 0.5s cubic-bezier(0.153, 1.465, 0.488, 1.05);}
+  .Mainimage:hover {
+    scale: 1.05;}
+  .startupforthe20000time {
+    background-color: #00000065;
+    animation: startup2 1 2s cubic-bezier(0.33, 1, 0.51, 1);}
+</style>
+<header style="font-size: 25px;"><a href="../../gallery.html"><img src="../../../characters/CharacterImages/back arrow.svg"></a></header>
+<div class="startupforthe20000time"><h1><b>"THE CORRUPTED"</b></h1></div>
+  <div class="charactersincluded">
+    <a style="background: linear-gradient(to bottom, #ff5cd6, #ff21c8), url(../../../grid.gif);  background-blend-mode: multiply;background-size: 24cm;background-attachment:fixed; border-radius: 5px;" href="#charsincluded">characters included!</a> | <a href="#info">info</a>
+        <div class="page" id="charsincluded">
+          <p style="padding-bottom: 5%;"><span style="background-color: rgba(255, 255, 255, 0.4);">none that currently (if ever) have a page</span></p>
+          <!-- <a href="../../../characters/Mari/Mari.html">
+            <img src="../../charactersincluded/test.svg"></a>
+          <a href="../../../characters/Mari/Mari.html">
+            <img src="../../charactersincluded/test .svg"></a> -->
+      </div> 
+    <div class="page" style="padding-bottom: 5%;" id="info">
+      <span style="background-color: rgba(255, 255, 255, 0.4);">
+        School project related to mixing animals, <i>might</i> do something with this later.
+      </span>
+    </div>
+  </div>
+<img class="Mainimage" src="gallery_img.jpeg">
+</html>
