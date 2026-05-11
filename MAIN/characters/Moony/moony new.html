@@ -5,6 +5,43 @@
  <link rel="icon" type="x-icon" href="Moony-Icon.svg">
 </head>
 <style>
+
+    @keyframes hovertilt {0% {rotate: 5deg;}50% {rotate: -5deg;}100% {rotate: 5deg;}}
+    @keyframes backarrowsway {0% {translate: 0px 5px;}50% {translate: 0px 0px;}100% {translate: 0px 5px;}}
+    @keyframes backarrowsway2 {0% {translate: 0px 2px;}50% {translate: 0px 0px;}100% {translate: 0px 2px;}}
+
+ 
+    .backbutton {
+      color: white;
+      text-decoration: none;
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      opacity: 1;
+      width: 55px; 
+      height: 55px; 
+      background-color: #ff3366; 
+      border: 5px solid #e42555;
+      border-radius: 15px;
+      padding: 10px; 
+      margin: 1px;
+      font-size: 20px;
+      animation: backarrowsway2 1.5s ease-in-out infinite;
+      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .backbutton img {
+      animation: backarrowsway 1.5s ease-in-out infinite;
+    }
+    .backbutton:hover img {
+      animation: hovertilt 1s ease-in-out infinite;
+    }
+    .backbutton:hover {
+      opacity: 0.5;
+      translate: 2px;
+      width: 60px;
+      height: 60px;
+      font-size: 25px;}
+ 
 .heightline {
   background-color: red;
   padding-right: 5%;
@@ -261,6 +298,8 @@ header:hover {translate: 0px -10px;}
   <p>● She married Sunny 1.42 Billion years ago, and they are still happy together! </p>
   <p>● the yellow parts of her arms are thought to be of cheese, though she has disproved this, people in 1854 were weird... </p>
 </div>
-<a class="button1" href="../updated char list.html" style="color: white; text-decoration: none; position: fixed; bottom: 5%; left: 5%;">Back</a>
 
+  <a href="../characterlist.html" class="backbutton" >
+      <img src="../CharacterImages/back arrow.svg">
+  </a>
 
