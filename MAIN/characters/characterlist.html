@@ -1,0 +1,243 @@
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Mari's website - characters</title>
+  <link rel="icon" type="x-icon" href="../icon-norm.svg">
+</head>
+
+
+<style>
+@keyframes startup {
+    0% {translate: 10vw -30vw; scale: 200%; transform: rotateY(720deg); padding: 50vw; }
+    99% {translate: 50vw -50vw; transform: rotateY(0deg);padding: 50vw; }
+    100% {translate: 0% 0%; transform: rotateY(0deg);padding: 0vw; }}
+
+@keyframes black {
+    0% {opacity: 1; translate: -5vw -5vw;}
+    99% {opacity: 0;translate: -5vw -5vw; z-index: 499;}
+    100% {translate: -500vw -500vw; z-index: -999999999999;}}
+
+
+.startupicon {
+    animation: startup 1s cubic-bezier(0.66, 0, 0, 0.997) 1;}
+
+.black-box {
+    width: 200vw;           
+    height: 200vw;          
+    background-color: black;
+    translate: -500vw -500vw;
+    animation: black 1s cubic-bezier(0.66, 0, 0, 0.997) 1;}
+
+  html {
+    image-rendering: pixelated;
+    background: linear-gradient(to top, #530000, #de0000), url(../grid.gif);
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    background-size: 36cm;
+    background-attachment: fixed;
+  }
+
+  /* one for each character */
+  .sunny {
+    z-index: 0;
+    translate: 0px 0px;
+    filter: drop-shadow(0px 0px -5px rgb(255, 255, 250)) drop-shadow(0px 0px 0px rgb(206, 133, 24));
+    transition: 575ms linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);
+  }
+
+  .sunny:hover {
+    translate: 0px -20px;
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 250)) drop-shadow(0px 15px 2px rgb(249, 160, 27));
+    z-index: 50;
+  }
+
+  .moony {
+    z-index: 1;
+    translate: 0px 0px;
+    filter: drop-shadow(0px 0px -2px rgb(255, 255, 250)) drop-shadow(0px 0px -2px rgb(143, 135, 182));
+    transition: 575ms linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);
+  }
+
+  .moony:hover {
+    translate: 0px -20px;
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 250))drop-shadow(0px 15px 2px rgb(143, 135, 182));
+    z-index: 50;
+  }
+
+  .mari {
+    translate: 0px 0px;
+    filter: drop-shadow(0px 0px -2px rgb(255, 255, 250)) drop-shadow(0px 0px 0px rgb(222, 93, 93));
+    transition: 575ms linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);
+  }
+
+  .mari:hover {
+    translate: 0px -20px;
+    filter: drop-shadow(0px 0px 0px rgb(255, 255, 250)) drop-shadow(0px 15px 2px rgb(222, 93, 93));
+    z-index: 50;
+  }
+
+  .carnellia {
+    translate: 0px 0px;
+    filter: drop-shadow(0px 0px -2px rgb(255, 255, 250)) drop-shadow(0px 0px 0px #ea21e0);
+    transition: 575ms linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);
+  }
+
+  .carnellia:hover {
+    translate: 0px -20px;
+    filter: drop-shadow(0px 0px 0px rgb(255, 255, 250)) drop-shadow(0px 15px 2px #ff67f7);
+    z-index: 50;
+  }
+
+  .zaia {
+    translate: 0px 0px;
+    filter: drop-shadow(0px 0px -2px rgb(255, 255, 250)) drop-shadow(0px 0px 0px rgb(127, 93, 222));
+    transition: 575ms linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);
+  }
+
+  .zaia:hover {
+    translate: 0px -20px;
+    filter: drop-shadow(0px 0px 0px rgb(255, 255, 250)) drop-shadow(0px 15px 2px rgb(127, 93, 222));
+    z-index: 50;
+  }
+
+  .nate {
+    translate: 0px 0px;
+    filter: drop-shadow(0px 0px -2px rgb(255, 255, 250)) drop-shadow(0px 0px 0px rgb(140, 222, 93));
+    transition: 575ms linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);
+  }
+
+  .nate:hover {
+    translate: 0px -20px;
+    filter: drop-shadow(0px 0px 0px rgb(255, 255, 250)) drop-shadow(0px 15px 2px rgb(140, 222, 93));
+    z-index: 50;
+  }
+
+  header {
+    position: fixed;
+    background: linear-gradient(to bottom, rgb(100, 75, 200), rgb(75, 50, 175));
+    background-size: 24cm;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    padding: 30px;
+    text-align: left;
+    border: 5px solid rgb(129, 71, 255);
+    border-radius: 15px;
+    translate: 0px -10px;
+    z-index: 498;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  header:hover {
+    translate: 0px -20px;
+    scale: 1.2;
+  }
+
+  .BG {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    translate: 0px 100px;
+    width: 90%;
+    height: 90%;
+    margin: 3%;
+    background: linear-gradient(to bottom, #7157ff, #1a0eff), url(../grid.gif);
+    background-blend-mode: multiply;
+    background-size: 48cm;
+    border: solid 5px #2d003d;
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 30px;
+    background-color: transparent
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(74, 0, 0);
+    background-blend-mode: multiply;
+    border-radius: 10000px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(164, 0, 0);
+    border-radius: 10000px;
+    border: 5px solid red
+  }
+
+  a:link {
+    color: rgb(234, 75, 75);
+    text-decoration: none;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: drop-shadow(0px 2px 3px rgb(0, 0, 0));}
+  a:visited {
+    color: rgb(160, 50, 50);
+    text-decoration: none;
+    filter: drop-shadow(0px 2px 3px rgb(0, 0, 0));}
+  a:hover {
+    margin-top: -5px;
+    color: rgb(255, 153, 204);
+    text-decoration: none;
+    filter: drop-shadow(0px 5px 3px rgb(0, 0, 0));}
+a:active {
+    color: rgb(85, 35, 60);
+    translate: 0px 2px;}
+</style>
+<a href="../../index.html"style="z-index: 500; position: fixed; right: 5%; top: 5%;">
+  <img src="../../MAIN/icon-norm.svg" class="startupicon" style="z-index: 500; position: fixed; right: 5%; top: 5%;">
+</a>
+<div class="black-box" style="opacity: 0; z-index: 499;position: fixed;"></div>
+
+
+<header style="font-size: 25px; color: white;">
+  <a href="../../index.html">Main Page</a>
+</header>
+<div class="BG">
+  <img src="character icons/BG.svg" style="z-index: -1; position: absolute; height: 95%; left: 15%; top: 2.5%;">
+
+  <a href="Mari/Mari.html" style="padding-right: 50px;">
+    <img src="character icons/Mari-CharacterIcon.svg" class="mari"
+      style="position: absolute; transform: translateX(calc(-50% + 350px)) translateY(calc(-50% + 400px)) scale(100%);">
+  </a>
+
+  <a href="Carnellia/page.html" style="padding-right: 50px;">
+    <img src="Carnellia/Carny render.svg" class="carnellia"
+      style="position: absolute; transform: translateX(calc(-50% + 600px)) translateY(calc(-50% + 250px)) scale(100%);">
+  </a>
+
+  <a href="Sunny/Sunny new.html" style="padding-right: 50px;">
+    <img src="character icons/Sunny-CharacterIcon.svg" class="sunny"
+      style="position: absolute; transform: translateX(calc(-50% + 300px)) translateY(calc(-50% + 150px)) scale(135%);">
+  </a>
+  <a href="Moony/Moony new.html" style="padding-right: 50px;">
+    <img src="character icons/Moony-CharacterIcon.svg" class="moony"
+      style=" position: absolute; transform: translateX(calc(-50% + 335px)) translateY(calc(-50% + 210px)) scale(135%);">
+  </a>
+
+  <!-- D-sides (aka non-important characters) -->
+  <img src="character icons/BG.svg"
+    style="filter: hue-rotate(90deg); z-index: -1; position: absolute; height: 95%; left: 115%; top: 2.5%;padding-right: 15%;">
+
+  <a href="Zaia/page.html" style="padding-right: 50px;">
+    <img src="character icons/Zaia-CharacterIcon.svg" class="zaia"
+      style=" position: absolute; transform: translateX(calc(-50% + 1235px)) translateY(calc(-50% + 350px)) scale(60%);">
+  </a>
+
+  <a href="Nate/page.html" style="padding-right: 50px;">
+    <img src="Nate/Placeholder.svg" class="nate"
+      style=" position: absolute; transform: translateX(calc(-50% + 1535px)) translateY(calc(-50% + 350px)) scale(100%);">
+  </a>
+
+<a href="rock/rocky.html">  <h1 id="result" style="opacity: 0;">Praise the rock</h1>
+<img id="result" src="ROCKEY the ROCK.svg" style="position: absolute; opacity: 0; scale: 0.3; right: 5%; top: 5%;">
+</a>  
+<span style="color: white; background-color: #2d003d; position: absolute;bottom:5%;">(i didnt make a character icon
+    for carnellia yet so i just used a render of her, but it still works as a link so its fine :3)</span>
+</div>
+
+<script>
+var rock = document.querySelector("#result");
+
+if (Math.floor(Math.random() * 15) === 1) {
+  rock.style.opacity = .3;
+};
+  </script>

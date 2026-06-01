@@ -1,0 +1,477 @@
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mari's website - Moony</title>
+    <link rel="icon" type="x-icon" href="../../icon-norm.svg">
+  </head>
+  <style>
+@keyframes startup {
+    0% {translate: 10vw -30vw; scale: 200%; transform: rotateY(720deg); padding: 50vw; }
+    99% {translate: 50vw -50vw; transform: rotateY(0deg);padding: 50vw; }
+    100% {translate: 0% 0%; transform: rotateY(0deg);padding: 0vw; }}
+
+@keyframes black {
+    0% {opacity: 1; translate: -5vw -5vw;}
+    99% {opacity: 0;translate: -5vw -5vw; z-index: 499;}
+    100% {translate: -500vw -500vw; z-index: -999999999999;}}
+
+
+.startupicon {
+    animation: startup 1s cubic-bezier(0.66, 0, 0, 0.997) 1;}
+
+.black-box {
+    width: 200vw;           
+    height: 200vw;          
+    background-color: black;
+    translate: -500vw -500vw;
+    animation: black 1s cubic-bezier(0.66, 0, 0, 0.997) 1;}
+
+
+
+  @keyframes headerappear {
+    0% {transform: translateY(-300px) rotateZ(360deg)}
+    100% {transform: translateY(0px) rotateZ(0deg);}}
+
+  @keyframes hovertilt {
+    0% {rotate: 5deg;}
+    50% {rotate: -5deg;}
+    100% {rotate: 5deg;}}
+
+  @keyframes backarrowsway {
+    0%,100% {translate: 0px 5px;}
+    50% {translate: 0px 0px;}}
+
+  @keyframes backarrowsway2 {
+    0%,100% {translate: 0px 2px;}
+    50% {translate: 0px 0px;}}
+
+  @font-face {
+    font-family: namefont;
+    src: url(Dusk.ttf);}
+
+  .gallery {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    background: linear-gradient(to top, var(--bordercolor), var(--brightermaincolor)), url(../../grid.gif);
+    background-blend-mode: multiply;
+    background-size: 36cm;
+    background-attachment: fixed;
+    width: 90%;
+    height: 90%;
+    border: 5px solid var(--bordercolor);
+    border-radius: 10px;
+  }
+
+  .galleryimg {
+    height: 20vw;
+    background-image: linear-gradient(to bottom, var(--maincolor), var(--darkermaincolor));
+    padding: 5px;
+    translate: 0 40px;
+    margin: 20px;
+    border: 5px solid var(--bordercolor);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .25s linear(0, 0.002 0.7%, 0.009 1.4%, 0.019 2.1%, 0.032 2.8%, 0.049 3.5%, 0.072 4.3%, 0.098 5.1%, 0.131 6%, 0.193 7.5%, 0.265 9.1%, 0.554 15%, 0.675 17.6%, 0.736 19%, 0.789 20.3%, 0.838 21.6%, 0.88 22.8%, 0.918 24%, 0.953 25.2%, 0.984 26.4%, 1.014 27.7%, 1.04 29%, 1.062 30.3%, 1.08 31.6%, 1.094 32.9%, 1.112 35%, 1.121 37.2%, 1.125 39.6%, 1.121 42.2%, 1.113 44.3%, 1.102 46.7%, 1.044 56.4%, 1.019 61.2%, 1.001 66.3%, 0.989 71.5%, 0.985 76%, 0.985 81.1%, 1);
+  }
+
+  .galleryimg:hover {
+    scale: 1.5;
+    z-index: 99999999999;
+    padding: 10px;
+  }
+
+  .page {
+    display: none;
+  }
+
+  .page:target {
+    display: block;
+  }
+
+  .box-container {
+    overflow-y: scroll;
+    background-color: var(--maincolor);
+    width: 95%;
+    height: 10%;
+    padding: 20px;
+    border: 5px solid var(--bordercolor);
+    border-radius: 10px;
+  }
+
+  .heightline {
+    background-color: red;
+    padding-right: 5%;
+    height: 3px;
+    width: 300px;
+    border: solid 2px darkred;
+  }
+
+  :root {
+    --bordercolor: rgb(57, 0, 57);
+    --charboxcol: rgb(76, 73, 93);
+    --dropshadowcol2: #000000;
+    --heightcol: invert(50%) sepia(100%) saturate(300%) brightness(100%) hue-rotate(180deg);
+    --color: sepia(100%) saturate(300%) brightness(60%) hue-rotate(180deg);
+    --text-shadow: -2px -2px 0 #36296b, 2px -2px 0 #36296b, -2px 2px 0 #36296b, 2px 2px 0 #36296b;
+    --maincolor: rgb(44, 22, 110);
+    --darkermaincolor: rgb(17, 6, 53);
+    --brightermaincolor: rgb(124, 97, 207);
+  }
+
+  /* char things */
+  .MoonyBox {
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    background: linear-gradient(to bottom, #000000, var(--charboxcol)), url(../../grid.gif);
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    background-size: 36cm;
+    background-attachment: fixed;
+    border: 5px solid var(--bordercolor);
+    padding: 10px;
+    filter: drop-shadow(0px 0px 15px var(--dropshadowcol1));
+    overflow: hidden;
+    translate: 40px 100px;
+    border-radius: 10px 10px 10px 10px;
+    z-index: 1;
+    transition: 0.75s linear(0, 0.002 0.6%, 0.008 1.3%, 0.017 1.9%, 0.03 2.6%, 0.047 3.3%, 0.067 4%, 0.123 5.6%, 0.176 6.9%, 0.243 8.4%, 0.519 14.1%, 0.634 16.6%, 0.694 18%, 0.746 19.3%, 0.794 20.6%, 0.835 21.8%, 0.873 23%, 0.91 24.3%, 0.943 25.6%, 0.971 26.9%, 0.996 28.2%, 1.018 29.5%, 1.036 30.8%, 1.051 32.2%, 1.068 34.2%, 1.079 36.3%, 1.084 38.5%, 1.085 40.9%, 1.081 43.3%, 1.073 46%, 1.033 55.9%, 1.018 60.2%, 1.007 64.3%, 1 68.4%, 0.995 73.4%, 0.993 79.2%, 1);
+  }
+
+  .MoonyBox:hover {
+    filter: drop-shadow(0px 0px 30px var(--dropshadowcol2));
+    width: 50%;
+    height: 145%;
+    z-index: 999;
+  }
+
+  .MoonyBox:hover img {
+    translate: 35% 15px;
+  }
+
+  .funfactbox {
+    background-color: var(--bordercolor);
+    border: 5px solid var(--darkermaincolor);
+    padding: 10px;
+    filter: drop-shadow(0px 0px 15px rgba(13, 15, 118, 0.737));
+    border-radius: 10px 10px 10px 10px;
+    width: 90%;
+    height: 65%;
+  }
+
+  .funfactbox {
+    background-color: #000000;
+    border: 5px solid #170034;
+    padding: 10px;
+    filter: drop-shadow(0px 0px 15px rgba(13, 15, 118, 0.737));
+    border-radius: 10px 10px 10px 10px;
+    width: 90%;
+  }
+
+  .BOXHERE {
+    background-color: #000000;
+    border: 5px solid #170034;
+    padding: 10px;
+    filter: drop-shadow(0px 0px 15px rgba(15, 17, 128, 0.861));
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .BOXHERE:hover {
+    filter: drop-shadow(0px 0px 25px rgba(21, 23, 149, 0.861));
+  }
+
+  /* links */
+  a:link {
+    color: rgb(255, 87, 87);
+    text-decoration: none;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: drop-shadow(0px 2px 3px rgb(0, 0, 0));
+  }
+  a:visited {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    filter: drop-shadow(0px 2px 3px rgb(0, 0, 0));
+  }
+  a:hover {
+    margin-top: -5px;
+    color: rgb(255, 119, 119);
+    text-decoration: none;
+    filter: drop-shadow(0px 5px 3px rgb(0, 0, 0));
+  }
+  a:active {
+    color: rgb(255, 0, 0);
+    translate: 0px 2px;
+  }
+
+  .coolhighlight {
+    filter: drop-shadow(0 0 -2px #fbfbfb);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+  }
+
+  .coolhighlight:hover {
+    translate: 0px -10px;
+    filter: drop-shadow(0 0 10px #fbfbfb);
+  }
+
+
+
+  .backbutton {
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    opacity: 1;
+    width: 5vw;
+    height: 5vw;
+    background-color: #ff3366;
+    border: 5px solid #e42555;
+    border-radius: 15px;
+    padding: 1vw;
+    margin: 0.5vw;
+    animation: backarrowsway2 1.5s ease-in-out infinite;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .backbutton img {
+    animation: backarrowsway 1.5s ease-in-out infinite;
+  }
+
+  .backbutton:hover img {
+    animation: hovertilt 1s ease-in-out infinite;
+  }
+
+  .backbutton:hover {
+    opacity: 0.5;
+    scale: 1.1;
+  }
+
+  .pronouns {
+    font-size: 1.6vw;
+    overflow: hidden;
+    width: 6vw;
+    height: 2vw;
+    background-color: black;
+    border: 0.5vw solid var(--darkermaincolor);
+    border-radius: 1vw;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .pronouns:hover {
+    scale: 1.2;
+    border-radius: 2vw;
+  }
+
+
+
+  ::-webkit-scrollbar {
+    width: 20px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(164, 0, 0);
+    border-radius: 10px;
+    border: 5px solid red
+  }
+
+  .center-img {
+    margin-top: 200px;
+    height: 185%;
+  }
+
+  .image1 {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .testeffect {
+    height: 100%;
+    translate: 0px 0px;
+    filter:
+      drop-shadow(0 0px -0.9px rgb(255, 255, 255)) drop-shadow(0 0px 0px rgb(91, 46, 174));
+    transition: .5s cubic-bezier(.1, 1.1, .25, 1.38);
+  }
+
+  .testeffect:hover {
+    translate: 0px -15px;
+    filter:
+      drop-shadow(0 0px 4px rgb(255, 255, 255)) drop-shadow(0 15px 1px rgb(114, 46, 174));
+  }
+
+  .outlined-text {
+    font-size: 48px;
+    color: white;
+    text-shadow:
+      -2px -2px 0 #36296b,
+      2px -2px 0 #36296b,
+      -2px 2px 0 #36296b,
+      2px 2px 0 #36296b;
+    transition: .5s cubic-bezier(.1, 1.1, .25, 1.38)
+  }
+
+  .outlined-text:hover {
+    translate: -7px;
+    text-shadow:
+      -2.5px -2.5px 0 #42337b, 2.5px -2.5px 0 #42337b, -2.5px 2.5px 0 #42337b, 2.5px 2.5px 0 #42337b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: linear-gradient(to bottom, var(--maincolor), var(--darkermaincolor)), url(../../grid.gif);
+    background-blend-mode: multiply;
+    background-size: 36cm;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    animation: headerappear 1s cubic-bezier(0, 1.314, 0.64, 1) 1;
+    position: fixed;
+    text-shadow: var(--text-shadow);
+    background-color: #4f3e92;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    text-align: left;
+    border: 5px solid #36296b;
+    border-radius: 15px;
+    z-index: 9999;
+    translate: 0px 5px;
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  header:hover {
+    translate: 0px -10px;
+  }
+</style>
+<a href="../../../index.html"style="z-index: 500; position: fixed; right: 5%; top: 5%;">
+  <img src="../../../MAIN/icon-norm.svg" class="startupicon" style="z-index: 500; position: fixed; right: 5%; top: 5%;">
+</a>
+  <div class="black-box" style="opacity: 0; z-index: 499;position: fixed;"></div>
+
+
+
+  <header style="font-size: 25px;"><a
+      href="../characterlist.html">Characters</a><a
+      style="transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);"> ► </a> <a
+      href="moony new.html"
+      style="transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);"><b>Moony</b></a></header>
+
+  <div>
+    <span class="outlined-text "
+      style="scale:1.2; font-family: namefont; position: absolute; left:43%; top: 20%; color: #8133ff; text-transform: capitalize;">
+      <b>Moony!</b>
+    </span>
+    <div style="color: #8133ff; position: absolute; left:59%; top: 20.5%;"
+      class="pronouns">
+      <b
+        style="color: #8133ff;filter: drop-shadow(0px 0px 2px blue);">She/her</b>
+    </div>
+  </div>
+
+  <div class="MoonyBox">
+    <img src="Moony Render.svg" class="testeffect"
+      style="padding-top: 50px; height:800px; margin: 5; scale: 1.15; padding-left: 1vw;">
+  </div>
+  <div style="position: absolute; right: 7%; top: 30%; width: 80%;">
+    <h6 class="BOXHERE"
+      style="color: whitesmoke;font-size:20px; position:absolute; top: 35%; left: 35%; font-family: Courier New;">Moony
+      is
+      the moon to <span style="font-size: 10px;">[name of the dome that ill
+        think of later]</span>, and the Wife to Sunny.
+      She is 4.43 billion years old, </h6>
+  </div>
+  <div style="position: absolute; right: 7%; top: 60%; width: 80%;">
+    <h6 class="BOXHERE"
+      style="color: whitesmoke;font-size:20px; position:absolute; top: 35%; left: 35%; font-family: Courier New;">Moony
+      is
+      the second to exist in the kevlic system, and the one to come up with the
+      idea of the dome. </h6>
+  </div>
+  <!-- end of render and bios -->
+
+  <div class="BOXHERE"
+    style="position: absolute; left: 5%; max-width: 45%; top: 130%; color: white; text-align: justify;">
+    Moony was originally meant to just be a background character when I made
+    her...<span style="font-size: x-small;">like
+      3 years ago...</span> but has since become more part of the main lore that
+    im trying to create.
+    <br><br>she is <span style="color: #fff584;">Yellow</span> and <span
+      style="color: #857a76;">gray</span> in color,
+    because i think the rumor that the moon is made of cheese is funny
+  </div>
+
+  <div style="position: absolute; right:  2%; top: 125%;">
+    <img class="image1" src="../CharacterImages/height-ref.svg"
+      style="filter:var(--heightcol); position: absolute; transform: translateX(calc(-50% + -270px)) translateY(calc(-50% + 430px)) scale(200%); z-index: -1; ">
+    <img class="center-img coolhighlight"
+      style="height: 500px;text-align: bottom; position: absolute; transform: translateX(calc(-200% + 55.5px)) translateY(calc(518px - 100%)) scale(125%); text-align: center;"
+      src="Moony Height.svg">
+    <div class="heightline"
+      style="position: absolute; transform: translateX(calc(-50% + -280px)) translateY(calc(-50% + 159px)) scale(100%); text-align: right">
+      <span
+        style="font-size: 250%; position: relative; top: -50px; left: 80px; color: #ffffff; filter: drop-shadow(3px 3px 1px var(--darkermaincolor)) drop-shadow(-3px -3px 4px var(--darkermaincolor));font-weight: 900; ">5'8"</span><span
+        style="font-size: 125%; position: relative; top: -20px; left: -10px; color: var(--brightermaincolor); filter: drop-shadow(3px 3px 1px var(--darkermaincolor)) drop-shadow(-3px -3px 4px var(--darkermaincolor));font-weight: 900;">173
+        CM</span></div>
+  </div>
+
+  <div class="box-container"
+    style="position: absolute; top: 300%; left: 5%; width: 90%; height: 90%; background-color: var(--maincolor); font-family: Courier New;">
+    <!-- Navigation Links -->
+    <a href="#funfact"
+      style="position: absolute; transform: translateX(0) translateY(-10px); text-align: center; font-size: 30px; color: #ffffff;">Fun
+      Facts </a>
+    <span
+      style="position: absolute; transform: translateX(180px) translateY(-10px); text-align: center; font-size: 30px; color: #ffffff;filter: drop-shadow(0px 0px 3px black);">|</span>
+    <a href="#gallery"
+      style="position:absolute; transform: translateX(220px) translateY(-10px); text-align: center; font-size: 30px; color: #ffffff;">Gallery
+    </a>
+    <!--fun facts-->
+    <div style="padding-top: 40px;">
+      <div id="funfact" class="page">
+        <div class="funfactbox"
+          style="color: whitesmoke;font-size:20px; font-family: Courier New; position: absolute; top: 150px; right: 5%;">
+          fun facts!
+          <p style="filter:drop-shadow(1px 1px 3px rgb(255, 0, 0));">● Her and
+            Sunny made the dome, along with someone
+            else, though they dont like talking about whoever it was much...
+          </p>
+          <p style="filter:drop-shadow(1px 1px 3px rgb(255, 0, 0));">● She
+            married Sunny 1.42 Billion years ago, and they
+            are still happy together! </p>
+          <p style="filter:drop-shadow(1px 1px 3px rgb(255, 0, 0));">● the
+            yellow parts of her arms are thought to be of
+            cheese, though she has disproved this, people in 1854 were weird...
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- gallery -->
+    <div id="gallery" class="page">
+      <div class="gallery">
+        <span
+          style="color:white; position: absolute; right: 5%; top: 7%; font-size: 20px;">Gallery!
+        </span>
+        <span
+          style="color:var(--darkermaincolor); position: absolute; right: 2%; top: 12%; font-size: 15px;">hover
+          over
+          the images for descriptions!
+        </span>
+        <img class="galleryimg" title="test img!" src="gallery/jeffery2.png"
+          id="gallery1">
+      </div>
+    </div>
+
+    <a href="../characterlist.html" class="backbutton">
+      <img src="../CharacterImages/back arrow.svg">
+    </a>

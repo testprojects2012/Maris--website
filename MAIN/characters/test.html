@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<style>
+@keyframes startup {
+    0% {translate: 10vw -30vw; scale: 200%; transform: rotateY(720deg); padding: 50vw; }
+    50% {translate: 10vw -30vw; scale: 200%;transform: rotateY(720deg); padding: 50vw; }
+    99% {translate: 50vw -50vw; transform: rotateY(0deg);padding: 50vw; }
+    100% {translate: 0% 0%; transform: rotateY(0deg);padding: 0vw; }}
+
+@keyframes black {
+    0% {opacity: 1; translate: -5vw -5vw;}
+    50% {opacity: 1;translate: -5vw -5vw}
+    99% {opacity: 0;translate: -5vw -5vw; z-index: 499;}
+    100% {translate: -500vw -500vw; z-index: -999999999999;}}
+
+
+
+.startupicon {
+    animation: startup 2s cubic-bezier(0.66, 0, 0, 0.997) 1;}
+
+.black-box {
+    width: 200vw;           
+    height: 200vw;          
+    background-color: black;
+    translate: -500vw -500vw;
+    animation: black 2s cubic-bezier(0.66, 0, 0, 0.997) 1;}
+</style>
+
+<img src="../../MAIN/icon-norm.svg" class="startupicon" style="z-index: 500; position: fixed; right: 5%; top: 5%;">
+<div class="black-box" style="opacity: 0; z-index: 499;position: fixed;"></div>
+
+<h1>test</h1>
